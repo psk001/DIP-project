@@ -2,7 +2,10 @@ import cv2 as cv
 import numpy as np
 
 
-cap = cv.VideoCapture("UCF_CrowdsDataset/2018-6_70.mp4")
+cap = cv.VideoCapture("UCF_CrowdsDataset/9-19_l.mov")
+
+if(not cap):
+    raise Exception ("video not captured\n")
 
 ret, first_frame = cap.read()
 

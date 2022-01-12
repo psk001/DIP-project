@@ -1,2 +1,10 @@
 .vscode
 /home/psk/Desktop/DIP-project/UCF_CrowdsDataset
+CrowdFlowSegmentation
+__pycache__
+UCF_CrowdsDataset
+DIP_Assignment.pdf
+DominantCrowdFlowSegmentation.ipynb
+.ipynb_checkpoints
+
+
