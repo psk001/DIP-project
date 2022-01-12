@@ -9,3 +9,6 @@ temporal dependencies, since it is based on just two frames. In order to achieve
 representation of flow from crowd motion, we use the streaklines to compute a new motion field
 which we refer to as streak flow. To compute streak flow, streaklines are computed by temporally
 integrating optical flow.
+
+### Group 7
+
