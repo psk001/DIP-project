@@ -1,7 +1,6 @@
 import cv2 as cv
 import numpy as np
 
-
 cap = cv.VideoCapture("UCF_CrowdsDataset/9-19_l.mov")
 
 if(not cap):
@@ -21,8 +20,7 @@ while(cap.isOpened()):
 	cv.imshow("input", frame)
 	gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 	
-	flow = cv.calcOpticalFlowFarneback(prev_gray, gray, None,
-									    0.5, 3, 15, 3, 5, 1.2, 0)
+	flow = cv.calcOpticalFlowFarneback(prev_gray, gray, None, 0.5, 3, 15, 3, 5, 1.2, 0)
 	
 
 	magnitude, angle = cv.cartToPolar(flow[..., 0], flow[..., 1])
