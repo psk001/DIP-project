@@ -6,6 +6,7 @@ currVideo = cv.VideoCapture('UCF_CrowdsDataset/RF1-12977_70.mov')
 
 if(not currVideo):
     raise Exception ("video not captured\n")
+    
 numFrames = int(currVideo.get(cv.CAP_PROP_FRAME_COUNT))
 
 #width = currVideo.get(cv.CAP_PROP_FRAME_WIDTH)
@@ -20,7 +21,6 @@ while (currVideo.isOpened()):
     flow = cv.calcOpticalFlowFarneback(prevGray, nextGray, None, 0.5, 3, 15, 3, 5, 1.2, 0)
     
     #cv.imshow("current flow", flow)
-
     px = np.arange(0, flow.shape[1], 10)
     py = np.arange(flow.shape[0], -1, -10)
     dx = flow[::10, ::10, 0]
